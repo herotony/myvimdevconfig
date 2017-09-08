@@ -1,6 +1,5 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle.vim
 call vundle#begin()
@@ -9,8 +8,8 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/vundle.vim'
-
 Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -44,3 +43,23 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+let mapleader=";"
+nnoremap nw <C-w>w
+nnoremap <Leader>lw <C-w>l
+nnoremap <Leader>hw <C-w>h
+nnoremap <Leader>kw <C-w>k
+nnoremap <Leader>jw <C-w>j
+nmap lb 0
+nmap le $
+nmap <leader>pa %
+set ignorecase
+map <F3> :NERDTreeToggle<CR>
+let g:ctrlp_map = '<C-f>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:20'
+let g:NERDTreeChDirMode = 2
+let g:ctrlp_working_path_mode = 'rw'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+vnoremap <leader>y "+y
+nmap <leader>p "+p
